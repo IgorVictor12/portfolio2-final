@@ -1,0 +1,205 @@
+/* O * faz com que se aplique as config abaixo na página toda (reseta) */
+{
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+    box-sizing: border-box; /* Limita a margem do conteúdo */
+}
+
+:root /* Paleta de cores modificada com tons de azul Cruzeiro */ 
+{
+    --cor-primaria: #002d72; /* Azul escuro */
+    --cor-secundaria: #0d5ade; /* Azul claro (AliceBlue) */
+    --cor-terciaria: #255fb7; /* Azul médio mais vibrante */
+    --cor-quartenaria: #003a90; /* Cor semelhante à cor terciária */
+
+    --fonte-primaria: "Krona One", sans-serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
+}
+
+body /* Todo conteúdo visual da página */
+{
+    background-color: var(--cor-primaria); /* Define a cor de fundo do corpo da página */
+    font-family: var(--fonte-secundaria); /* Define a fonte padrão do corpo */
+    margin: 0; /* Remove a margem padrão */
+    color: var(--cor-secundaria); /* Define a cor da fonte */
+}
+
+header /* Cabeçalho da página */
+{
+    padding: 2% 0% 0% 15%; /* Define um preenchimento no topo e nas laterais */
+}
+
+.menu /* Barra de navegação */
+{
+    display: flex; /* Define o layout do menu como flexbox */
+    padding: 10px 5%; /* Define o preenchimento interno */
+    flex-direction: row; /* Organiza os itens do menu em uma linha */
+    cursor: pointer; /* Define o cursor do mouse como ponteiro */
+    margin-left: 12%; /* Margem à esquerda */
+    gap: 100px; /* Espaço entre os itens */
+    font-size: 1.5rem; /* Tamanho da fonte */
+}
+
+.menu1 /* Links do menu */
+{
+    text-decoration: none; /* Remove a decoração padrão dos links */
+    color: var(--cor-terciaria); /* Cor da fonte */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    font-family: var(--fonte-secundaria); /* Fonte */
+    font-weight: 600; /* Espessura da fonte */
+}
+
+.pai /* Main */
+{
+    margin: 5% 15%; /* Margem */
+    display: flex; /* Layout flexbox */
+    align-items: center; /* Alinhamento vertical */
+    justify-content: space-between; /* Distribuição horizontal */
+    gap: 40px; /* Espaço entre itens */
+    height: 100vh; /* Altura 100% da viewport */
+}
+
+.textor /* Seção de texto */
+{
+    width: 615px; /* Largura */
+    display: flex; /* Flexbox */
+    justify-content: center; /* Centraliza colunas */
+    align-items: center; /* Alinhamento vertical */
+    flex-direction: column; /* Direção vertical */
+    gap: 30px; /* Espaço entre itens */
+}
+
+.pz_titulo /* h1 */
+{
+    font-size: 2.125rem; /* Tamanho da fonte */
+    font-family: var(--fonte-primaria); /* Fonte primária */
+    font-weight: 400; /* Espessura */
+}
+
+.destaque_t /* strong */
+{
+    color: var(--cor-terciaria); /* Cor de destaque */
+}
+
+.pz_texto /* p */
+{
+    font-size: 1.375rem; /* Tamanho da fonte */
+    font-family: var(--fonte-secundaria); /* Fonte secundária */
+    font-weight: 400; /* Espessura */
+}
+
+.links /* Div para links */
+{
+    display: flex; /* Flexbox */
+    justify-content: space-between; /* Distribui espaço */
+    align-items: center; /* Alinhamento vertical */
+    flex-direction: column; /* Direção vertical */
+    gap: 28px; /* Espaço entre itens */
+}
+
+.apresentação_titulo_link /* h2 */
+{
+    font-size: 1.5rem; /* Tamanho da fonte */
+    font-family: var(--fonte-primaria); /* Fonte primária */
+    font-weight: 400; /* Espessura */
+    color: var(--cor-secundaria); /* Cor da fonte */
+}
+
+.button  /* Botão */
+{
+    display: flex; /* Flexbox */
+    padding: 10px 20px; /* Preenchimento interno */
+    color: var(--cor-secundaria); /* Cor da fonte */
+    border-width: 2px; /* Largura da borda */
+    border-color: var(--cor-terciaria); /* Cor da borda */
+    border-style: solid; /* Estilo da borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro */
+    text-align: center; /* Alinhamento do texto */
+    align-items: center; /* Alinhamento vertical */
+    justify-content: center; /* Alinhamento horizontal */
+    gap: 6px; /* Espaço entre itens */
+    width: 378px; /* Largura do botão */
+    text-decoration: none; /* Remove a decoração padrão dos links */
+    font-size: 1.125rem; /* Tamanho da fonte */
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+.button:hover /* Estilo ao passar o mouse */
+{
+    background-color: var(--cor-quartenaria); /* Cor de fundo ao passar o mouse */
+}
+
+footer /* Rodapé */
+{
+    background-color: var(--cor-quartenaria); /* Fundo do rodapé */
+}
+
+.rodape /* Texto do rodapé */
+{
+    padding: 24px; /* Preenchimento interno */
+    text-align: center; /* Alinhamento do texto */
+    font-size: 1.375rem; /* Tamanho da fonte */
+    font-family: var(--fonte-secundaria); /* Fonte secundária */
+    color: var(--cor-secundaria); /* Cor do texto */
+    bottom: 0; /* Posiciona na parte inferior */
+}
+
+@media (max-width: 1200px) /* Responsividade para telas médias */
+{       
+    header {
+        padding: 10%;
+    }
+
+    .menu {
+        flex-direction: row;
+        align-items: center;
+        margin-left: 12%;
+        gap: 16px;
+    }
+
+    .pai /* Main */
+    {
+        flex-direction: column-reverse;
+        padding: 5%;
+        margin: 5% 5%; /* Ajuste de margem */
+        gap: 20px; /* Ajuste de espaço */
+    }
+
+    .textor {
+        width: auto;
+        text-align: center;
+    }
+
+    .button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) /* Responsividade para telas pequenas */
+{
+    .menu {
+        font-size: 1rem; /* Ajuste de fonte para menu */
+        flex-direction: column;
+    }
+
+    .pz_titulo /* h1 */
+    {
+        font-size: 1.5rem; /* Ajuste de fonte */
+    }
+
+    .pz_texto /* p */
+    {
+        font-size: 1rem; /* Ajuste de fonte */
+    }
+
+    .apresentação_titulo_link /* h2 */
+    {
+        font-size: 1.25rem; /* Ajuste de fonte */
+    }
+
+    .rodape /* Texto do rodapé */
+    {
+        font-size: 1rem; /* Ajuste de fonte */
+    }
+}
